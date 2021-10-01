@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="simulationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1164.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SceneController">
+    <children>
+        <ImageView fitHeight="526.0" fitWidth="1034.0" layoutX="-1.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../pictures/background.png" />
+            </image>
+        </ImageView>
+        <Pane layoutX="8.0" layoutY="6.0" prefHeight="220.0" prefWidth="994.0" style="-fx-background-color: gray;">
+         <children>
+              <Button fx:id="startButton" layoutX="29.0" layoutY="155.0" mnemonicParsing="false" onAction="#startSimulation" prefHeight="43.0" prefWidth="87.0" text="START">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font></Button>
+            <Button layoutX="136.0" layoutY="155.0" mnemonicParsing="false" onAction="#stopSimulation" prefHeight="43.0" prefWidth="87.0" text="STOP">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="lowCapacityCarsTextField" layoutX="29.0" layoutY="41.0" prefHeight="25.0" prefWidth="138.0" />
+            <Label layoutX="29.0" layoutY="14.0" text="Low capacity Cars" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="83.0" text="High Capacity Cars" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="highCapacityCarsTextField" layoutX="29.0" layoutY="110.0" prefHeight="25.0" prefWidth="138.0" />
+            <Label layoutX="201.0" layoutY="14.0" text="Start Work Hour" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="83.0" text="End Work Hour" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="353.0" layoutY="14.0" text="Start Break Hour" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="startWorkHourTextField" layoutX="200.0" layoutY="41.0" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="startBreakHourTextField" layoutX="353.0" layoutY="41.0" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="endWorkHourTextField" layoutX="201.0" layoutY="109.0" prefHeight="25.0" prefWidth="123.0" />
+            <TextField fx:id="endBreakHourTextField" layoutX="353.0" layoutY="110.0" prefHeight="25.0" prefWidth="125.0" />
+            <Label layoutX="353.0" layoutY="83.0" text="End Break Hour" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loadingMaxDelayTextField" layoutX="659.0" layoutY="41.0" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="loadingMinDelayTextField" layoutX="659.0" layoutY="109.0" prefHeight="25.0" prefWidth="125.0" />
+            <TextField fx:id="minutesToResignTextField" layoutX="823.0" layoutY="41.0" prefHeight="25.0" prefWidth="125.0" />
+            <Label layoutX="503.0" layoutY="14.0" text="Car join max delay" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="659.0" layoutY="14.0" text="Loading max delay" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="659.0" layoutY="83.0" text="Loading min delay" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="824.0" layoutY="14.0" text="Minutes to resign" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="joiningQueueMaxDelayTextField" layoutX="502.0" layoutY="41.0" prefHeight="25.0" prefWidth="139.0" />
+            <TextField fx:id="joiningQueueMinDelayTextField" layoutX="503.0" layoutY="110.0" prefHeight="25.0" prefWidth="138.0" />
+            <Label layoutX="503.0" layoutY="83.0" text="Car join min delay" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Label fx:id="time" layoutX="888.0" layoutY="343.0" prefHeight="37.0" prefWidth="105.0">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="loader1Status" layoutX="97.0" layoutY="566.0" prefHeight="27.0" prefWidth="135.0" text="LOADER 1">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="loader2Status" layoutX="344.0" layoutY="566.0" prefHeight="27.0" prefWidth="156.0" text="LOADER 2">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="loader3Status" layoutX="594.0" layoutY="566.0" prefHeight="27.0" prefWidth="138.0" text="LOADER 3">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="loader4Status" layoutX="840.0" layoutY="566.0" prefHeight="27.0" prefWidth="131.0" text="LOADER 4">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane fx:id="resignedCarsPane" layoutX="1013.0" layoutY="7.0" prefHeight="753.0" prefWidth="139.0" style="-fx-background-color: GRAY;">
+         <children>
+            <Label layoutX="10.0" layoutY="7.0" text="Resigned Cars" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></Pane>
+    </children>
+</Pane>

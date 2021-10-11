@@ -7,16 +7,18 @@ It should be assumed that N excavators and K light duty cars and L heavy duty ca
 
 To compile the code fully, you must have the Javafx library configured in the InteliJ environment.
 
-Class Name Representation of the assumption
-Application Creates car and charger threads, creates all objects, and connects them to a graphical interface
-Car The car class is a weft class that simulates the operation of a car. It joins the queue at random intervals and waits for loading. It exits after loading or after the quit time has elapsed.
-Config The class that stores all the default settings taken from the file at the beginning. Then it overwrites them by the user entered.
-Loader The loader class is a thread class that simulates the operation of a loader by loading cars onto a ship. The work of the thread strongly depends on the timer. The charger starts and stops working via the clock signal, and it also leaves and returns from a break. Loading takes place at random intervals.
-Queue The class that controls the queue of cars. He presents it by means of a list.
-Stopper A class that acts as a timer. Each car starts a timer when it joins the queue. After the cancellation time has elapsed, the Stopper notifies the car. It ends when the car resigns from loading or is loaded
-WorkClock The thread class that simulates a clock. It measures the day in an accelerated manner. Controls the work of chargers.
-Main The class that starts the javaFX GUI thread
-SceneController Class that controls the graphical interface and invokes the application thread.
+  - Application Creates car and charger threads, creates all objects, and connects them to a graphical interface
+  - Car The car class is a weft class that simulates the operation of a car. It joins the queue at random intervals and waits for loading. 
+    It exits after loading or after the  quit time has elapsed.
+  - Config The class that stores all the default settings taken from the file at the beginning. Then it overwrites them by the user entered.
+  - Loader The loader class is a thread class that simulates the operation of a loader by loading cars onto a ship. The work of the thread strongly depends on the timer. 
+    The charger starts and stops working via the clock signal, and it also leaves and returns from a break. Loading takes place at random intervals.
+  - Queue The class that controls the queue of cars. He presents it by means of a list.
+  - Stopper A class that acts as a timer. Each car starts a timer when it joins the queue. After the cancellation time has elapsed, 
+    the Stopper notifies the car. It ends when the car resigns from loading or is loaded
+  - WorkClock The thread class that simulates a clock. It measures the day in an accelerated manner. Controls the work of chargers.
+  - Main The class that starts the javaFX GUI thread
+  - SceneController Class that controls the graphical interface and invokes the application thread.
 
 The simulation works as follows:
 
@@ -71,4 +73,4 @@ When the working time is over and the charger wants the car from the queue, it s
 
 When the car resigns and wants to be removed from the queue, it must be granted access to the monitor.
 
-
+![image](https://user-images.githubusercontent.com/26255190/136775012-6b81ef0a-bb9e-48a9-8f94-d2e8959ca891.png)
